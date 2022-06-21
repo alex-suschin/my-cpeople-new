@@ -1,0 +1,29 @@
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    li {
+        margin-right: 32px;
+        &:last-child {
+            margin-right: 0;
+        }
+        i {
+            display: block;
+            width: 11px;
+            height: 6px;
+            background: url(../../assets/img/arr-bottom.svg) no-repeat center;
+            margin-left: 8px;
+        }
+    }
+    a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 120%;
+        color: #FFFFFF;
+        letter-spacing: -0.02em;
+    }
+}

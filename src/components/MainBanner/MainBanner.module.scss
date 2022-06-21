@@ -1,0 +1,15 @@
+.main-banner-wrap {
+    display: flex;
+    margin-top: 98px;
+    margin-bottom: 98px;
+}
+.main-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    h1 {
+        width: 69%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
