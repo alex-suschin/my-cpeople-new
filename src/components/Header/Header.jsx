@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from './Header.module.scss'
 import logo from "../../assets/img/logo.svg";
 import arrUp from "../../assets/img/arr-up.svg";
 import Nav from '../Nav/Nav';
 
 const Header = (props) => {
+  const [isShow, setIsShow] = useState(false);
+  const toggleHeader = () => setIsShow(!isShow);
+
   return (
-    <header>
+    <header className={!isShow ? styles['_hidden'] : ''}>
       <div className="container">
         <div className={styles['header-box']}>
           <a href="#" className={styles.logo}>
@@ -24,9 +27,9 @@ const Header = (props) => {
               </label>
             </div>
 
-            <a href="#" className={styles['link-auth']}>Выход</a>
+           <a href="#" className={styles['link-auth']}>Выход</a>
 
-            <div className={styles['btn-hidden-header']}>
+            <div onClick={toggleHeader} className={styles['btn-hidden-header']}>
               <img src={arrUp} alt="" />
             </div>
           </div>
