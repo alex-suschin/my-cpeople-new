@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: 'Inter', sans-serif;
   background: #2F2F2F;
+  overflow-x: hidden;
 }
 div, header, footer, a, p {
   box-sizing: border-box;
@@ -49,4 +50,16 @@ img {
   line-height: 120%;
   background: #FFFFFF;
   border-radius: 30px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  &:hover {
+    border-color: #FFFFFF;
+    background: #2F2F2F;
+    color: #fff;
+  }
 }

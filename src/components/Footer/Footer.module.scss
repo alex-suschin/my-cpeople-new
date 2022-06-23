@@ -41,6 +41,9 @@ footer {
         line-height: 19px;
         text-decoration-line: underline;
         color: #FFFFFF;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 .footer-elem-desc {

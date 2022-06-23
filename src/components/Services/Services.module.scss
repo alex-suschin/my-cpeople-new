@@ -1,6 +1,20 @@
 .services-wrap {
     margin-bottom: 64px;
     margin-top: 98px;
+    &:first-child {
+        .services-items {
+            &>div{
+                max-width: 427px;
+                width: 100%;
+                &:nth-child(2n) {
+                    margin-right: 20px;
+                }
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 }
 .services-title {
     font-weight: 300;

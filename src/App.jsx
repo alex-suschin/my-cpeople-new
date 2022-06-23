@@ -38,16 +38,12 @@ function App(props) {
       <MainBanner />
       {loading && <img className="loading" src={spinner} alt="Spinner" />}
 
-      {items.map(item => (
-        <Services title={item.header} items={item.items} key={item.header} />
-      ))}
-
+      <div className="services-box">
+        {items ? items.map(item => (
+          <Services title={item.header} items={item.items} key={item.header} />
+        )) : <h2>Элементы не найдены</h2>}
+      </div>
       
-
-      {/* <Services title="Сервисы для всех:" items={items} />
-      <Services title="Для менеджеров:" items={items} />
-      <Services title="Для руководителей:" items={items} /> */}
-
       <Footer />
     </div>
   );
