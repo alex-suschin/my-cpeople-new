@@ -4,19 +4,57 @@
     justify-content: flex-start;
     align-items: center;
     li {
+        position: relative;
         margin-right: 32px;
         &:last-child {
             margin-right: 0;
         }
         i {
+            position: relative;
             display: block;
             width: 11px;
             height: 6px;
-            background: url(../../assets/img/arr-bottom.svg) no-repeat center;
             margin-left: 8px;
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: all .2s linear;
+                -webkit-transition: all .2s linear;
+                -moz-transition: all .2s linear;
+                -ms-transition: all .2s linear;
+                -o-transition: all .2s linear;
+                &:last-child {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+        &:hover {
+            .sub-menu {
+                opacity: 1;
+                visibility: visible;
+            }
+            i img {
+                &:first-child {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &:last-child {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
         }
     }
     a {
+        padding: 20px 0;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -25,6 +63,44 @@
         line-height: 120%;
         color: #FFFFFF;
         letter-spacing: -0.02em;
+    }
+}
+.sub-menu {
+    opacity: 0;
+    visibility: hidden;
+    top: 102%;
+    left: -16px;
+    min-width: 200px;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    padding: 16px;
+    background: #2F2F2F;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    z-index: 99;
+    li {
+        text-align: left;
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    a {
+        white-space: nowrap;
+        text-align: left;
+        padding: 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+        &:hover {
+            color: #4FD321;
+        }
     }
 }
 

@@ -20,7 +20,7 @@ const Header = (props) => {
     return [value, setValue];
   }
 
-  const [isShow, setIsShow] = useStickyState(false, 'isShow');
+  const [isShow, setIsShow] = useStickyState(false, 'header-show-status');
   const toggleHeader = () => setIsShow(!isShow);
 
   const [isHidden, setIsHidden] = useState(false);
