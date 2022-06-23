@@ -2,10 +2,16 @@ header {
     padding: 20px 0;
     border-bottom: 1px solid #B5B5B5;
     &._hidden {
-        // .btn-hidden-header {
-        //     width: 11px;
-        //     height: 6px;
-        // }
+        padding: 0;
+        background: #fff;
+        .header-box {
+            display: none;
+        }
+    }
+    &._active {
+        .btn-show-header {
+            display: none;
+        }
     }
 }
 .header-box {
@@ -96,4 +102,22 @@ header {
     width: 26px;
     height: 14px;
     margin-left: 66px;
+}
+.btn-show-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px 50px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #fff;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    &:hover {
+        background: #4fd321;
+    }
 }

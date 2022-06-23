@@ -1,6 +1,9 @@
 .main-banner-wrap {
     display: flex;
     margin-top: 98px;
+    &._hidden {
+        display: none;
+    }
     .container {
         position: relative;
     }

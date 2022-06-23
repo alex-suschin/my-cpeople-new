@@ -3,11 +3,6 @@ import styles from './ServiceItem.module.scss';
 
 const ServiceItem = (props) => {
 
-  console.log(props)
-  console.log(props.item)
-  console.log(props.item)
-  console.log(props.item.textNote)
-
   return (
     <div className={styles['service-item']}>
       <div data-tooltip={props.item.textNote} className={styles['service-item-note']}>?</div>
@@ -15,7 +10,7 @@ const ServiceItem = (props) => {
 
       <div className={styles['service-links']}>
         {props.item.links.map((item, index) =>
-          <a href={item.title}>{item.title} <i></i></a>
+          <a href={item.title} key={item.title}>{item.title} <i></i></a>
           )}
       </div>
 

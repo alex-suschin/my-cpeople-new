@@ -4,7 +4,6 @@ import styles from './Services.module.scss'
 
 const Services = ({props, title, items}) => {
 
-  console.log(items)
 
   return (
     
@@ -13,10 +12,7 @@ const Services = ({props, title, items}) => {
             <div className={styles['services-title']}>{title}</div>
             <div className={styles['services-items']}>
                 {items.map((item, index) =>
-                  {item.items.map((item, index) => {
                     <ServiceItem item={item} key={item.id} />
-                  }
-                  )}
                 )}
             </div>
         </div>

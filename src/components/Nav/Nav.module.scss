@@ -27,3 +27,9 @@
         letter-spacing: -0.02em;
     }
 }
+
+._hidden {
+    .menu {
+        display: none;
+    }
+}

@@ -1,15 +1,22 @@
-import React, {useState} from 'react'
+import React, {useState, useStickyState} from 'react'
 import styles from './Header.module.scss'
 import logo from "../../assets/img/logo.svg";
 import arrUp from "../../assets/img/arr-up.svg";
+import arrBlack from "../../assets/img/arr-black.svg";
 import Nav from '../Nav/Nav';
 
 const Header = (props) => {
   const [isShow, setIsShow] = useState(false);
   const toggleHeader = () => setIsShow(!isShow);
 
+  const [isHidden, setIsHidden] = useState(false);
+  const showHeader = () => {setIsHidden(!isHidden); setIsShow(!isShow);}
+
   return (
-    <header className={!isShow ? styles['_hidden'] : ''}>
+    <header className={!isShow ? styles._hidden : styles._active}>
+      <button onClick={showHeader} className={styles['btn-show-header']}>
+          <img src={arrBlack} alt="" />
+      </button>
       <div className="container">
         <div className={styles['header-box']}>
           <a href="#" className={styles.logo}>

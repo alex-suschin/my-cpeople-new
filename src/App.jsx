@@ -19,15 +19,8 @@ function App(props) {
           'https://sasweb.ru/react-test/serv-info-1.json'
         )
 
-        console.log(items)
-        console.log(data)
-        console.log(data.sections)
-        console.log(setItems(data.sections))
-
         setItems(data.sections)
 
-        console.log(items)
-        console.log(items.items)
       } catch(error) {
         console.log('error')
       }
@@ -45,13 +38,15 @@ function App(props) {
       <MainBanner />
       {loading && <img className="loading" src={spinner} alt="Spinner" />}
 
-      {/* {items.map(item => (
-        <a href="#">{item}</a>
-      ))} */}
+      {items.map(item => (
+        <Services title={item.header} items={item.items} key={item.header} />
+      ))}
 
-      <Services title="Сервисы для всех:" items={items} />
+      
+
+      {/* <Services title="Сервисы для всех:" items={items} />
       <Services title="Для менеджеров:" items={items} />
-      <Services title="Для руководителей:" items={items} />
+      <Services title="Для руководителей:" items={items} /> */}
 
       <Footer />
     </div>
