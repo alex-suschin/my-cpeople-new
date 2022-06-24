@@ -1,4 +1,5 @@
 .services-wrap {
+    width: 100%;
     margin-bottom: 64px;
     margin-top: 98px;
     &:first-child {
@@ -6,11 +7,23 @@
             &>div{
                 max-width: 427px;
                 width: 100%;
+                @media screen and (max-width: 1380px) {
+                    max-width: initial;
+                    width: 32.25%;
+                }
                 &:nth-child(2n) {
                     margin-right: 20px;
+                    &>div:first-child::before {
+                        left: -70px;
+                        right: initial;
+                    }
                 }
                 &:nth-child(3n) {
                     margin-right: 0;
+                    &>div:first-child::before {
+                        left: initial;
+                        right: -45px;
+                    }
                 }
             }
         }

@@ -5,7 +5,7 @@ import arrBlack from '../../assets/img/arr-right-black.svg'
 
 const ServiceItem = (props) => {
 
-  let note = props.item.textNote ? <div data-tooltip={props.item.textNote} className={styles['service-item-note']}>?</div> : '';
+  let note = props.item.textNote ? <div data-tooltip={props.item.textNote} className={styles['service-item-note']}>? <i></i></div> : '';
 
   let title = props.item.title.name ? <a href={props.item.title.href} className={styles['service-item-title']}>{props.item.title.name}</a> : <div className={styles['service-item-title']}>{props.item.title}</div>;
 

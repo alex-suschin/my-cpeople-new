@@ -36,6 +36,9 @@ ul {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+  @media screen and (max-width: 1380px) {
+    padding: 0 40px;
+  }
 }
 img {
   display: block;
@@ -63,8 +66,19 @@ img {
   -ms-transition: all .2s linear;
   -o-transition: all .2s linear;
   &:hover {
-    border-color: #FFFFFF;
-    background: #2F2F2F;
-    color: #fff;
+    border-color: #4FD321;
+    background: #4FD321;
+    color: #272727;
   }
+}
+.services-box {
+  width: 100%;
+}
+::selection {
+  background: #4FD321; 
+  color: #272727;
+}
+::-moz-selection {
+  background: #4FD321; 
+  color: #272727;
 }
