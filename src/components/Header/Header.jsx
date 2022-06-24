@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from './Header.module.scss'
 import logo from "../../assets/img/logo.svg";
 import arrUp from "../../assets/img/arr-up.svg";
 import arrBlack from "../../assets/img/arr-black.svg";
 import Nav from '../Nav/Nav';
 
-const Header = (props) => {
+const Header = ({props, changeTheme, themeBlack}) => {
   
   function useStickyState(defaultValue, key) {
     const [value, setValue] = React.useState(() => {
@@ -14,7 +14,7 @@ const Header = (props) => {
         ? JSON.parse(stickyValue)
         : defaultValue;
     });
-    React.useEffect(() => {
+    useEffect(() => {
       window.localStorage.setItem(key, JSON.stringify(value));
     }, [key, value]);
     return [value, setValue];
@@ -25,6 +25,7 @@ const Header = (props) => {
 
   const [isHidden, setIsHidden] = useState(false);
   const showHeader = () => {setIsHidden(!isHidden); setIsShow(!isShow);}
+  
 
   return (
     <header className={!isShow ? styles._hidden : styles._active}>
@@ -41,9 +42,9 @@ const Header = (props) => {
 
           <div className={styles['header-info']}>
             <div className={styles['label-box']}>
-              <span>Перейти на светлую сторону:</span>
+              <span>Перейти на {themeBlack ? 'светлую' : 'тёмную'}  сторону:</span>
               <label>
-                <input type="checkbox" />
+                <input onChange={changeTheme} type="checkbox" />
                 <span><i></i></span>
               </label>
             </div>

@@ -29,6 +29,9 @@ ul {
 }
 .App {
   text-align: center;
+  &._white-theme {
+    background: #fff;
+  }
 }
 .container {
   position: relative;

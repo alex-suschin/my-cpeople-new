@@ -9,8 +9,9 @@ import Footer from "./components/Footer/Footer";
 
 
 function App(props) {
-  const [items, setItems] = React.useState([])
-  const [loading, setLoading] = React.useState(true)
+  const [items, setItems] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [themeBlack, setThemeBlack] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,11 +30,15 @@ function App(props) {
     }
     fetchData()
   }, [])
+  
+  function changeTheme () {
+    setThemeBlack(!themeBlack);
+  }
 
 
   return (
-    <div className="App">
-      <Header />
+    <div className={`App ${!themeBlack ? '_white-theme' : ''}`}>
+      <Header themeBlack changeTheme={changeTheme} />
 
       <MainBanner />
       {loading && <img className="loading" src={spinner} alt="Spinner" />}
