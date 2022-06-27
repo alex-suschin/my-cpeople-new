@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import styles from './Header.module.scss'
+import styles from './Header.scss'
 import logo from "../../assets/img/logo.svg";
+import logoBlack from "../../assets/img/logo-black.svg";
 import arrUp from "../../assets/img/arr-up.svg";
+import arrUpBlack from "../../assets/img/arr-up-black.svg";
 import arrBlack from "../../assets/img/arr-black.svg";
 import Nav from '../Nav/Nav';
 
@@ -28,31 +30,33 @@ const Header = ({props, changeTheme, themeBlack}) => {
   
 
   return (
-    <header className={!isShow ? styles._hidden : styles._active}>
-      <button onClick={showHeader} className={styles['btn-show-header']}>
+    <header className={!isShow ? "_hidden" : "_active"}>
+      <button onClick={showHeader} className="btn-show-header">
           <img src={arrBlack} alt="" />
       </button>
       <div className="container">
-        <div className={styles['header-box']}>
-          <a href="#" className={styles.logo}>
+        <div className="header-box">
+          <a href="#" className="logo">
             <img src={logo} alt="" />
+            <img src={logoBlack} alt="" />
           </a>
 
           <Nav />
 
-          <div className={styles['header-info']}>
-            <div className={styles['label-box']}>
-              <span>Перейти на {themeBlack ? 'светлую' : 'тёмную'}  сторону:</span>
+          <div className="header-info">
+            <div className="label-box">
+              <span>Перейти на {!themeBlack ? 'тёмную' : 'светлую'} сторону:</span>
               <label>
                 <input onChange={changeTheme} type="checkbox" />
                 <span><i></i></span>
               </label>
             </div>
 
-           <a href="#" className={styles['link-auth']}>Выход</a>
+           <a href="#" className="link-auth">Выход</a>
 
-            <div onClick={toggleHeader} className={styles['btn-hidden-header']}>
+            <div onClick={toggleHeader} className="btn-hidden-header">
               <img src={arrUp} alt="" />
+              <img src={arrUpBlack} alt="" />
             </div>
           </div>
         </div>

@@ -12,8 +12,11 @@
     padding: 32px 32px 40px 32px;
     margin-right: 19px;
     margin-bottom: 20px;
-    &:nth-child(3n+1),
-    &:nth-child(4n+1) {
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+    &:nth-child(3n+1),&:nth-child(4n+1) {
         max-width: 100%;
         width: 66.137%;
     }
@@ -24,7 +27,7 @@
             right: -45px;
         }
         [data-tooltip]::after {
-            top: -78px;
+            top: -60px;
         }
     }
     @media screen and (max-width: 1380px) {
@@ -130,6 +133,7 @@ a.service-item-title {
     display: block;
     position: absolute;
     top: -77px;
+    top: -60px;
     left: -15px;
     opacity: 0;
     visibility: hidden;
@@ -139,13 +143,17 @@ a.service-item-title {
     -ms-transition: all .2s linear;
     -o-transition: all .2s linear;
     z-index: 105;
-    height: 50px;
-    width: 50px;
-    background-color: #2F2F2F;
-    border: 1px solid #4fd321;
-    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
-    transform: rotate(-45deg);
-    border-radius: 0 0 0 0.6em;
+    // height: 50px;
+    // width: 50px;
+    // background-color: #2F2F2F;
+    // border: 1px solid #4fd321;
+    // clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+    // transform: rotate(-45deg);
+    // border-radius: 0 0 0 0.6em;
+    width: 58px;
+    height: 53px;
+    background: url(../../assets/img/arr-note.png) no-repeat center;
+    background-size: contain;
 }
 [data-tooltip]:hover::before,
 [data-tooltip]:hover::after {
@@ -221,5 +229,28 @@ a.service-item-title {
                 }
             }
         }
+    }
+}
+._white-theme {
+    .service-item {
+        background: #fff;
+    }
+    .service-links a {
+        background: #fff;
+        color: #2F2F2F;
+    }
+    .service-item-title {
+        color: #2F2F2F;
+    }
+    a.service-item-title {
+        color: #4FD321;
+    }
+    .service-links a i img:first-child {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .service-links a i img:last-child {
+        opacity: 1;
+        visibility: visible;
     }
 }

@@ -67,3 +67,17 @@ footer {
     width: 100%;
     margin-left: auto;
 }
+._white-theme {
+    .btn-white {
+        background: #2F2F2F;
+        color: #fff;
+    }
+    .footer-elem-desc {
+        color: #2F2F2F;
+    }
+    .footer-title,
+    .footer-elem-title,
+    .footer-elem-links a {
+        color: #2F2F2F;
+    }
+}

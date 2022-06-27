@@ -30,9 +30,11 @@
                 -moz-transition: all .2s linear;
                 -ms-transition: all .2s linear;
                 -o-transition: all .2s linear;
-                &:last-child {
-                    opacity: 0;
-                    visibility: hidden;
+                opacity: 0;
+                visibility: hidden;
+                &:first-child {
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
         }
@@ -42,10 +44,8 @@
                 visibility: visible;
             }
             i img {
-                &:first-child {
-                    opacity: 0;
-                    visibility: hidden;
-                }
+                opacity: 0;
+                visibility: hidden;
                 &:last-child {
                     opacity: 1;
                     visibility: visible;
@@ -103,9 +103,34 @@
         }
     }
 }
-
 ._hidden {
     .menu {
         display: none;
+    }
+}
+._white-theme {
+    .menu a {
+        color: #2F2F2F;
+    }
+    .menu li i img:nth-child(2) {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu li:hover i img {
+        opacity: 0;
+        visibility: hidden;
+        &:last-child {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .sub-menu {
+        background: #fff;
+        a {
+            color: #2F2F2F;
+            &:hover {
+                color: #4FD321;
+            }
+        }
     }
 }

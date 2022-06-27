@@ -1,6 +1,7 @@
 import React from 'react'
-import styles from './Nav.module.scss'
+import styles from './Nav.scss'
 import arrBottom from '../../assets/img/arr-bottom.svg'
+import arrBottomBlack from '../../assets/img/arr-bottom-black.svg'
 import arrBottomGreen from '../../assets/img/arr-bottom-green.svg'
 
 const Nav = (props) => {
@@ -111,17 +112,18 @@ const Nav = (props) => {
     ]
   return (
     
-    <ul className={styles.menu}>
+    <ul className="menu">
         {menu.map((item, index) =>
         <li key={item.id}>
           <a href={item.href}>{item.title}
             <i>
               <img src={arrBottom} alt="" />
+              <img src={arrBottomBlack} alt="" />
               <img src={arrBottomGreen} alt="" />
             </i>
           </a>
           {item.submenu ? 
-            <ul className={styles['sub-menu']}>
+            <ul className="sub-menu">
               {item.submenu.map((itm, idx) => 
               <li key={itm.href}><a href={itm.href}>{itm.title}</a></li>)}
             </ul>
