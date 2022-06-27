@@ -7,20 +7,9 @@ import arrUpBlack from "../../assets/img/arr-up-black.svg";
 import arrBlack from "../../assets/img/arr-black.svg";
 import Nav from '../Nav/Nav';
 
-const Header = ({props, changeTheme, themeBlack}) => {
+const Header = ({props, useStickyState, changeTheme, themeBlack}) => {
   
-  function useStickyState(defaultValue, key) {
-    const [value, setValue] = React.useState(() => {
-      const stickyValue = window.localStorage.getItem(key);
-      return stickyValue !== null
-        ? JSON.parse(stickyValue)
-        : defaultValue;
-    });
-    useEffect(() => {
-      window.localStorage.setItem(key, JSON.stringify(value));
-    }, [key, value]);
-    return [value, setValue];
-  }
+  
 
   const [isShow, setIsShow] = useStickyState(false, 'header-show-status');
   const toggleHeader = () => setIsShow(!isShow);

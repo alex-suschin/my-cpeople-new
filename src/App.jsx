@@ -9,9 +9,23 @@ import Footer from "./components/Footer/Footer";
 
 
 function App(props) {
+
+  function useStickyState(defaultValue, key) {
+    const [value, setValue] = React.useState(() => {
+      const stickyValue = window.localStorage.getItem(key);
+      return stickyValue !== null
+        ? JSON.parse(stickyValue)
+        : defaultValue;
+    });
+    useEffect(() => {
+      window.localStorage.setItem(key, JSON.stringify(value));
+    }, [key, value]);
+    return [value, setValue];
+  }
+
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
-  const [themeBlack, setThemeBlack] = useState(true)
+  const [themeBlack, setThemeBlack] = useStickyState(true, 'setThemeBlack')
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +52,7 @@ function App(props) {
 
   return (
     <div className={`App ${!themeBlack ? '_white-theme' : ''}`}>
-      <Header themeBlack changeTheme={changeTheme} />
+      <Header useStickyState={useStickyState} themeBlack={themeBlack} changeTheme={changeTheme} />
 
       <MainBanner />
       {loading && <img className="loading" src={spinner} alt="Spinner" />}
