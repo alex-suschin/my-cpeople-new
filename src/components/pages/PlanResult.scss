@@ -1,0 +1,50 @@
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav-tabs .nav-item {
+    margin-bottom: -1px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+#fullScreenTabContent > .active {
+    position: relative;
+    visibility: visible;
+    pointer-events: all;
+}
+#fullScreenTabContent > .tab-pane {
+    display: block;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+#fullScreenTabContent iframe, #fullScreenTabContent .iframe, #fullScreenTabContent .tab-pane {
+    width: 100%;
+    height: 100%;
+}
+#fullScreenTabContent > .active {
+    position: relative;
+    visibility: visible;
+    pointer-events: all;
+}

@@ -11,7 +11,7 @@ import Footer from "./components/Footer/Footer";
 function App(props) {
 
   function useStickyState(defaultValue, key) {
-    const [value, setValue] = React.useState(() => {
+    const [value, setValue] = useState(() => {
       const stickyValue = window.localStorage.getItem(key);
       return stickyValue !== null
         ? JSON.parse(stickyValue)
@@ -26,6 +26,7 @@ function App(props) {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [themeBlack, setThemeBlack] = useStickyState(true, 'setThemeBlack')
+  const [isBlackChecked, setIsBlackChecked] = useStickyState(true, 'ThemeBlackChecked')
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,6 +48,7 @@ function App(props) {
   
   function changeTheme () {
     setThemeBlack(!themeBlack);
+    setIsBlackChecked(!isBlackChecked)
   }
 
 

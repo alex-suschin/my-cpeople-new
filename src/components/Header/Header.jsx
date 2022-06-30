@@ -25,7 +25,7 @@ const Header = ({props, useStickyState, changeTheme, themeBlack}) => {
       </button>
       <div className="container">
         <div className="header-box">
-          <a href="#" className="logo">
+          <a href="/" className="logo">
             <img src={logo} alt="" />
             <img src={logoBlack} alt="" />
           </a>

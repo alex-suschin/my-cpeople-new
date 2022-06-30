@@ -1,8 +1,11 @@
-import React from 'react'
+import {React, BrowserRouter, Routes, Route } from 'react'
 import styles from './Nav.scss'
 import arrBottom from '../../assets/img/arr-bottom.svg'
 import arrBottomBlack from '../../assets/img/arr-bottom-black.svg'
 import arrBottomGreen from '../../assets/img/arr-bottom-green.svg'
+import PlanResult from '../pages/PlanResult'
+import { Link } from "react-router-dom";
+// import App from '../../App'
 
 const Nav = (props) => {
     let menu = [
@@ -12,11 +15,11 @@ const Nav = (props) => {
         'href': '1',
         'submenu': [{
             "title": "Паспорт и проектные данные",
-            "href": "https://my.cpeople.ru/plan-result/"
+            "href": "plan-result"
         },
         {
             "title": "Назначить продукт и этап",
-            "href": "https://my.cpeople.ru/set_product_and_stage_cloud/"
+            "href": "set_product_and_stage_cloud"
         }]
       },
       {
@@ -111,21 +114,37 @@ const Nav = (props) => {
       }
     ]
   return (
+
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="plan" element={<PlanResult />} />
+    //   </Routes>
+    // </BrowserRouter>
+
+    // <nav
+    //     style={{
+    //       borderBottom: "solid 1px",
+    //       paddingBottom: "1rem",
+    //     }}
+    //   >
+    //     <Link to="/invoices">Invoices</Link> |{" "}
+    //     <Link to="/expenses">Expenses</Link>
+    //   </nav>
     
     <ul className="menu">
         {menu.map((item, index) =>
         <li key={item.id}>
-          <a href={item.href}>{item.title}
+          <Link to={'/' + item.href}>{item.title}
             <i>
               <img src={arrBottom} alt="" />
               <img src={arrBottomBlack} alt="" />
               <img src={arrBottomGreen} alt="" />
             </i>
-          </a>
+          </Link>
           {item.submenu ? 
             <ul className="sub-menu">
               {item.submenu.map((itm, idx) => 
-              <li key={itm.href}><a href={itm.href}>{itm.title}</a></li>)}
+              <li key={itm.href}><Link to={'/' + itm.href}>{itm.title}</Link></li>)}
             </ul>
             : ''}
         </li>
