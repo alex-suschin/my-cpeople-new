@@ -108,7 +108,7 @@ const Nav = (props) => {
         'href': '6',
         'submenu': [{
           "title": "Создать подпись",
-          "href": "https://my.cpeople.ru/signature/"
+          "href": "signature"
         }
         ]
       }
@@ -134,7 +134,7 @@ const Nav = (props) => {
     <ul className="menu">
         {menu.map((item, index) =>
         <li key={item.id}>
-          <Link to={'/' + item.href}>{item.title}
+          <Link to={item.href}>{item.title}
             <i>
               <img src={arrBottom} alt="" />
               <img src={arrBottomBlack} alt="" />
@@ -144,7 +144,7 @@ const Nav = (props) => {
           {item.submenu ? 
             <ul className="sub-menu">
               {item.submenu.map((itm, idx) => 
-              <li key={itm.href}><Link to={'/' + itm.href}>{itm.title}</Link></li>)}
+              <li key={itm.href}><Link to={itm.href}>{itm.title}</Link></li>)}
             </ul>
             : ''}
         </li>

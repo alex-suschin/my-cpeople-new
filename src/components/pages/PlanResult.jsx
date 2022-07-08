@@ -21,7 +21,7 @@ const PlanResult = ({useStickyState, changeTheme, themeBlack}) => {
 
   return (
     <div>
-        <Header useStickyState={useStickyState} themeBlack={themeBlack} changeTheme={changeTheme}  />
+        <Header useStickyState={useStickyState} themeBlack={themeBlack} changeTheme={changeTheme} />
 
         <ul className="nav nav-tabs pl-5" id="myTab" role="tablist">
             <li className="nav-item">

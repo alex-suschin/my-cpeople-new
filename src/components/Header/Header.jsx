@@ -36,7 +36,7 @@ const Header = ({props, useStickyState, changeTheme, themeBlack}) => {
             <div className="label-box">
               <span>Перейти на {!themeBlack ? 'тёмную' : 'светлую'} сторону:</span>
               <label>
-                <input onChange={changeTheme} type="checkbox" />
+                <input onChange={changeTheme} defaultChecked={!themeBlack} type="checkbox" />
                 <span><i></i></span>
               </label>
             </div>

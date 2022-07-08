@@ -6,7 +6,7 @@ import Services from './components/Services/Services';
 import spinner from './assets/img/spinner.svg';
 import axios from 'axios'
 import Footer from "./components/Footer/Footer";
-
+import Select from 'react-select'
 
 function App(props) {
 
