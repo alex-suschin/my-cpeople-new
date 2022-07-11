@@ -79,11 +79,11 @@ const Nav = (props) => {
         'href': '5',
         'submenu': [{
           "title": "Выгрузка времени в Google (БД)",
-          "href": "https://my.cpeople.ru/time-records-update-db/"
+          "href": "unload-time"
         },
         {
           "title": "Перенос времени, проставленного в проект",
-          "href": " https://my.cpeople.ru/move_project_time/"
+          "href": "move-time-project"
         },
         {
           "title": "Перенос времени из проекта в проект",

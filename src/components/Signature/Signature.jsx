@@ -1,5 +1,6 @@
 import {React, useState, useEffect} from 'react'
 import ReactSelect from 'react-select'
+import useStickyState from '../../assets/js/useStickyState'
 import Footer from '../Footer/Footer'
 import FooterSmall from '../FooterSmall/FooterSmall'
 import Header from '../Header/Header'
@@ -68,22 +69,7 @@ export const stateOptions = [
 ];
 
 
-const Signature = ({useStickyState, changeTheme, themeBlack}) => {
-    function useStickyState(defaultValue, key) {
-        const [value, setValue] = useState(() => {
-          const stickyValue = window.localStorage.getItem(key);
-          return stickyValue !== null
-            ? JSON.parse(stickyValue)
-            : defaultValue;
-        });
-        useEffect(() => {
-          window.localStorage.setItem(key, JSON.stringify(value));
-        }, [key, value]);
-        return [value, setValue];
-      }
-
-      
-
+const Signature = ({changeTheme, themeBlack}) => {
   return (
     <div>
         <Header useStickyState={useStickyState} themeBlack={themeBlack} changeTheme={changeTheme}  />
@@ -114,10 +100,10 @@ const Signature = ({useStickyState, changeTheme, themeBlack}) => {
                       Пример: Head of Research & Development department</p>
                     </div>
                     
-                      <div class="clonable-inputs     js-clonable-inputs js-position-inputs">
-                        <div class="clonable-input">
-                          <input class="base-input" type="text" placeholder='Введите название' name="position[0]" required />
-                          <button type="button" class="clonable-action"></button>
+                      <div className="clonable-inputs js-clonable-inputs js-position-inputs">
+                        <div className="clonable-input">
+                          <input className="base-input" type="text" placeholder='Введите название' name="position[0]" required />
+                          <button type="button" className="clonable-action"></button>
                         </div>
                       </div>
                   </div>
@@ -147,7 +133,7 @@ const Signature = ({useStickyState, changeTheme, themeBlack}) => {
                     </div>
                     
                     <div className="signature-phones">
-                      <ReactSelect options={stateOptions}  />
+                      <ReactSelect options={stateOptions} />
                     </div>
                   </div>
 

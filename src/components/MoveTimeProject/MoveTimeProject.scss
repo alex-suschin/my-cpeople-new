@@ -1,0 +1,47 @@
+.content-move-time {
+    h1 {
+        width: 45%;
+    }
+    form {
+        margin-top: 80px;
+    }
+    .content-form-item {
+        width: 59%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    label {
+        display: block;
+        margin-bottom: 12px;
+    }
+    .content-form-item-desc {
+        margin-bottom: 28px;
+    }
+    span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: -0.04em;
+        color: #A9A8A8;
+    }
+    input {
+        display: block;
+        max-width: 353px;
+        width: 100%;
+        margin-left: auto;
+    }
+}
+.move-time-btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 48px;
+    .label-checkbox {
+        margin-bottom: 0;
+    }
+    a {
+        margin-right: 32px;
+    }
+}

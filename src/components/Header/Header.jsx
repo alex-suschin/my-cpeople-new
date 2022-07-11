@@ -9,8 +9,6 @@ import Nav from '../Nav/Nav';
 
 const Header = ({props, useStickyState, changeTheme, themeBlack}) => {
   
-  
-
   const [isShow, setIsShow] = useStickyState(false, 'header-show-status');
   const toggleHeader = () => setIsShow(!isShow);
 

@@ -225,7 +225,7 @@ hr {
   content: '+';
   color: #4FD321;
 }
-.label-checkbox {
+.content .label-checkbox {
   position: relative;
   cursor: pointer;
   padding: 0 0 0 32px;
@@ -364,4 +364,7 @@ hr {
   .label-checkbox {
     margin-left: 0;
   }
+}
+.custom-select {
+  background: transparent;
 }

@@ -1,4 +1,5 @@
 import React, {useContext, useEffect, useState} from "react";
+import useStickyState from "./assets/js/useStickyState";
 import './App.scss';
 import Header from './components/Header/Header';
 import MainBanner from './components/MainBanner/MainBanner';
@@ -8,21 +9,8 @@ import axios from 'axios'
 import Footer from "./components/Footer/Footer";
 import Select from 'react-select'
 
+
 function App(props) {
-
-  function useStickyState(defaultValue, key) {
-    const [value, setValue] = useState(() => {
-      const stickyValue = window.localStorage.getItem(key);
-      return stickyValue !== null
-        ? JSON.parse(stickyValue)
-        : defaultValue;
-    });
-    useEffect(() => {
-      window.localStorage.setItem(key, JSON.stringify(value));
-    }, [key, value]);
-    return [value, setValue];
-  }
-
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [themeBlack, setThemeBlack] = useStickyState(true, 'setThemeBlack')

@@ -1,0 +1,30 @@
+.upload-btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 80px;
+    a {
+        margin-right: 24px;
+    }
+    span {
+        position: relative;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+        background: url(../../assets/img/galka-big.svg) no-repeat left center;
+        padding: 0 0 0 21px;
+        opacity: 1;
+        visibility: hidden;
+        &._active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+.content-upload {
+    h1 {
+        width: 45%;
+    }
+}
