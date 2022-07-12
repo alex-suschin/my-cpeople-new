@@ -1,0 +1,19 @@
+.content-unloading-data {
+    h1 {
+        width: 45%;
+    }
+    .unloading-list {
+        margin-top: 80px;
+        div {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }   
+}

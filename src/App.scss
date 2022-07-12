@@ -104,6 +104,9 @@ img {
     letter-spacing: -0.04em;
     color: #FFFFFF;
   }
+  .btn-white {
+    min-width: 198px;
+  }
 }
 .desc {
   font-weight: 300;
@@ -366,5 +369,71 @@ hr {
   }
 }
 .custom-select {
-  background: transparent;
+  &>div {
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+}
+.css-319lph-ValueContainer {
+  padding: 0px;
+}
+#react-select-2-listbox {
+  background: #fff;
+}
+.sub-title {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+.list-scroll-wrap {
+  padding: 16px 8px 16px 16px;
+  max-width: 570px;
+  border: 1px solid #444444;
+  margin-bottom: 48px;
+  .title {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+  .list-scroll-items {
+    height: 248px;
+    overflow-y: scroll;
+    .users-list__item {
+        display: block;
+        margin-bottom: 16px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+        &:hover {
+            color: #4FD321;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #5E5E5E;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+    }
+  }
 }

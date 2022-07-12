@@ -87,19 +87,23 @@ const Nav = (props) => {
         },
         {
           "title": "Перенос времени из проекта в проект",
-          "href": "https://my.cpeople.ru/time-records-move-to-another-project/"
+          "href": "move-time-from-project"
         },
         {
           "title": "Правка имени пользователя",
-          "href": "https://my.cpeople.ru/time-records-update-user-name/ "
+          "href": "edit-name-user "
         },
         {
           "title": "Импорт времени в коллаб",
-          "href": "https://my.cpeople.ru/time-records-import/"
+          "href": "import-in-collab"
         },
         {
           "title": "Выгрузка данных из коллаба",
-          "href": "https://my.cpeople.ru/scripts/export-collab-to-docs/export.php"
+          "href": "unloading-data"
+        },
+        {
+          "title": "Назначить продукт и этап",
+          "href": "nominate-product"
         }]
       }
       ,{

@@ -29,7 +29,7 @@ const MoveTimeProject = ({changeTheme, themeBlack}) => {
                             <ReactSelect className="custom-select" options={projectOptions} />
                             <div className="move-time-btns">
                                 <a href="#" className="btn-white">Запустить</a>
-                                <label className='label-checkbox add-office-phone'>
+                                <label className='label-checkbox'>
                                     <b>Добавлять телефон офиса</b>
                                     <input type="checkbox" />
                                     <span></span>

@@ -1,0 +1,90 @@
+.content-move-time-from-project {
+    h1 {
+        width: 45%;
+    }
+    form {
+        margin-top: 80px;
+    }
+    .content-form-items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .content-form-item {
+            max-width: 381px;
+            width: 100%;
+            &:first-child {
+                margin-right: 105px;
+            }
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+            color: #A9A8A8;
+            margin-bottom: 20px;
+        }
+    }
+    .date-block {
+        position: relative;
+        margin-top: 48px;
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .title {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+        input {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            letter-spacing: -0.04em;
+            color: #fff;
+        }
+    }
+}
+.date-inputs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+        margin-left: auto;
+    }
+    .date-input {
+        position: relative;
+        width: 101px;
+        margin-right: 13px;
+        input {
+            width: 100%;
+        }
+        &::after {
+            content: '.';
+            position: absolute;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            letter-spacing: -0.04em;
+            color: #fff;
+            bottom: -1px;
+            right: -7px;
+        }
+        &:last-child {
+            margin-right: 0;
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
